@@ -1,6 +1,7 @@
 /* ── CONFIG EmailJS : remplace les 3 valeurs ── */
-const EMAILJS = { publicKey: 'VOTRE_PUBLIC_KEY', service: 'VOTRE_SERVICE_ID', template: 'VOTRE_TEMPLATE_ID' };
-if (window.emailjs) emailjs.init({ publicKey: EMAILJS.publicKey });
+const EMAILJS = { publicKey: 'uhlYBSBZTZaJGeUlb', service: 'service_v7ilkd5', template: 'template_4nmy8op' };
+const hasEmailJsConfig = Object.values(EMAILJS).every((value) => value && !value.startsWith('VOTRE_'));
+if (window.emailjs && hasEmailJsConfig) emailjs.init({ publicKey: EMAILJS.publicKey });
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -24,10 +25,7 @@ const PROJECTS = [
   ['Application Serverless AWS', 'cloud', "Application web serverless sur AWS : Lambda, API Gateway, S3.", ['AWS', 'Lambda', 'API Gateway', 'S3'], [['Live', 'https://ufhb-frontend-jjk.s3.eu-north-1.amazonaws.com/index.html'], ['Dépôt', GH + 'JunRoot29/Site-Ufhb.git']]],
   ['Analyse DHCP DORA IPv4 vs IPv6', 'security', "Analyse comparative du processus DORA entre IPv4 et IPv6 via captures Wireshark (broadcast vs multicast).", ['DHCP', 'Wireshark', 'Kathara'], [['Dépôt', GH + 'JunRoot29/Projet-DHCP-Analyse-du-processus-DORA-IPv4-vs-IPv6-.git'], ['Rapport', doc('TP – DHCP.pdf')]], ['Comparaison des échanges DHCPv4 et DHCPv6', 'Observation du broadcast IPv4 et du multicast IPv6', 'Analyse à partir de captures Wireshark']],
   ['Supervision réseau Centreon', 'security', "Supervision réseau complète avec Centreon dans un environnement VMware (3 serveurs).", ['Centreon', 'SNMP', 'VMware', 'Postfix'], [['Rapport', doc('centreon.pdf')]]],
-  ['Analyse réseau Wireshark', 'security', "Analyse de trafic réseau et détection de menaces avec Wireshark.", ['Wireshark', 'Réseaux'], [['Rapport', doc('Analyse WireShark.pdf')]]],
   ['Gestion de Bibliothèque', 'web', "Application Flask/SQLite : comptes, catalogue, emprunts, réservations, rôles admin/usager et dashboards avec alertes.", ['Python', 'Flask', 'SQLite'], [['Dépôt', GH + 'JunRoot29/Gestion-d-une-Bibliotheque.git'], ['Rapport', doc('RAPPORT DU PROJETGESTION DE BIBLIOTHEQUE.pdf')]], ['Gestion des rôles administrateur et usager', 'Suivi des emprunts et réservations', 'Tableau de bord avec alertes et recherche']],
-  ['Simulation Inscription UFHB', 'web', "Gestion des inscriptions universitaires avec Flask, Kivy et SQLite : suivi du dossier, validation pédagogique, tableau de bord.", ['Flask', 'Kivy', 'SQLite'], [['Dépôt', GH + 'JunRoot29/TP---FIN-DE-MODULE---GENIE-LOGICIEL.git']], ['Création et suivi des dossiers étudiants', 'Validation pédagogique', 'Tableau de bord de suivi']],
-  ['HKI Innovation', 'web', "Site professionnel pour une entreprise de reprographie, informatique et formations à Abidjan : responsive, intégration WhatsApp, 16 programmes, SEO.", ['HTML5', 'CSS3', 'JavaScript'], [['Voir le site', 'https://www.hkiinovation.com/']]],
   ['MathCraft Web', 'web', "Plateforme web de mathématiques numériques avec API Flask : théorie des nombres, intégration numérique, interpolation de Lagrange.", ['Python', 'Flask', 'API REST'], []],
   ['MathCraft Tkinter', 'web', "Calculatrice moderne avec interface graphique Python et Tkinter.", ['Python', 'Tkinter', 'GUI'], [['Dépôt', GH + 'JunRoot29/MathCraft.git']]],
 ];
@@ -65,36 +63,45 @@ $('#certs').innerHTML = CERTS.map(([t, m, u]) => `<li class="rv${u === null ? ' 
 
 /* ── THÈME ── */
 const root = document.documentElement;
-if (localStorage.getItem('jjka-theme') === 'light') root.dataset.theme = 'light';
-$('#theme').onclick = () => {
-  const light = root.dataset.theme !== 'light';
-  light ? (root.dataset.theme = 'light') : root.removeAttribute('data-theme');
-  localStorage.setItem('jjka-theme', light ? 'light' : 'dark');
+const themeColor = $('meta[name="theme-color"]');
+const setTheme = (theme) => {
+  root.dataset.theme = theme;
+  localStorage.setItem('jjka-theme', theme);
+  themeColor.content = theme === 'light' ? '#ffffff' : '#081020';
+  $('#theme').setAttribute('aria-checked', String(theme === 'dark'));
+  $('#theme').title = theme === 'light' ? 'Activer le thème sombre' : 'Activer le thème clair';
 };
+setTheme(localStorage.getItem('jjka-theme') === 'dark' ? 'dark' : 'light');
+$('#theme').onclick = () => setTheme(root.dataset.theme === 'light' ? 'dark' : 'light');
 
 /* ── MENU MOBILE ── */
-const burger = $('#burger'), menu = $('#menu');
-const closeMenu = () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); };
-burger.onclick = () => burger.setAttribute('aria-expanded', menu.classList.toggle('open'));
-$$('#menu a').forEach((a) => a.addEventListener('click', closeMenu));
-addEventListener('keydown', (e) => e.key === 'Escape' && closeMenu());
-
-/* ── TYPING ── */
-const roles = ['BSS Intern · ZTE', 'Étudiant Cybersécurité & Réseaux', 'CTF Player · CyLab Academy', 'Cyberanalyste Junior (Cisco)', 'Python & Automatisation'];
-(function typing() {
-  const el = $('#typing');
-  if (reduce) return (el.textContent = roles[0]);
-  let r = 0, c = 0, del = false;
-  const tick = () => {
-    const w = roles[r];
-    el.textContent = w.slice(0, del ? --c : ++c);
-    let d = del ? 28 : 55;
-    if (!del && c === w.length) { d = 1800; del = true; }
-    else if (del && c === 0) { del = false; r = (r + 1) % roles.length; d = 400; }
-    setTimeout(tick, d);
-  };
-  setTimeout(tick, 900);
-})();
+const burger = $('#burger'), menu = $('#menu'), mobileNav = matchMedia('(max-width: 900px)');
+const mainContent = $('main'), footer = $('footer');
+const setMenuOpen = (open, restoreFocus = false) => {
+  const isOpen = open && mobileNav.matches;
+  const isClosedMobile = mobileNav.matches && !isOpen;
+  menu.classList.toggle('open', isOpen);
+  menu.inert = isClosedMobile;
+  isClosedMobile ? menu.setAttribute('aria-hidden', 'true') : menu.removeAttribute('aria-hidden');
+  burger.setAttribute('aria-expanded', String(isOpen));
+  mainContent.inert = isOpen;
+  footer.inert = isOpen;
+  if (isOpen) $('a', menu).focus();
+  else if (restoreFocus) burger.focus();
+};
+setMenuOpen(false);
+burger.onclick = () => setMenuOpen(burger.getAttribute('aria-expanded') !== 'true');
+$$('#menu a').forEach((a) => a.addEventListener('click', () => {
+  const target = $(a.getAttribute('href'));
+  setMenuOpen(false);
+  const focusTarget = target?.querySelector('.label, h1') || target;
+  if (focusTarget) {
+    focusTarget.setAttribute('tabindex', '-1');
+    requestAnimationFrame(() => focusTarget.focus({ preventScroll: true }));
+  }
+}));
+addEventListener('keydown', (e) => e.key === 'Escape' && setMenuOpen(false, true));
+mobileNav.addEventListener('change', () => setMenuOpen(false));
 
 /* ── PROJETS : accordéon + filtre ── */
 $$('.pj > button').forEach((b) => b.addEventListener('click', () => {
@@ -154,18 +161,26 @@ if (!reduce && matchMedia('(hover:hover)').matches) {
 /* ── FORMULAIRE (EmailJS + repli mailto) ── */
 const toast = $('.toast');
 const say = (m) => { toast.textContent = m; toast.classList.add('on'); setTimeout(() => toast.classList.remove('on'), 2800); };
+$('#form-note').textContent = hasEmailJsConfig ? 'Votre message sera envoyé directement depuis ce formulaire.' : 'Sans configuration EmailJS, votre application e-mail s’ouvrira avec le message prérempli.';
 $('#form').addEventListener('submit', async (e) => {
   e.preventDefault();
   const f = e.target, btn = $('#send');
+  if (!f.reportValidity()) return;
   const data = { from_name: f.from_name.value.trim(), reply_to: f.reply_to.value.trim(), message: f.message.value.trim() };
   if (!data.from_name || !data.reply_to || !data.message) return say('Merci de remplir tous les champs.');
+  const mailto = `mailto:junioragbenonzan31@gmail.com?subject=${encodeURIComponent('Contact portfolio – ' + data.from_name)}&body=${encodeURIComponent(`Nom: ${data.from_name}\nEmail: ${data.reply_to}\n\n${data.message}`)}`;
+  if (!window.emailjs || !hasEmailJsConfig) {
+    say('Ouverture de votre application email…');
+    location.href = mailto;
+    return;
+  }
   btn.disabled = true; $('span', btn).textContent = 'Envoi…';
   try {
     await emailjs.send(EMAILJS.service, EMAILJS.template, data);
     say('Message envoyé avec succès.'); f.reset();
   } catch (err) {
     console.error('EmailJS error:', err);
-    location.href = `mailto:junioragbenonzan31@gmail.com?subject=${encodeURIComponent('Contact portfolio – ' + data.from_name)}&body=${encodeURIComponent(`Nom: ${data.from_name}\nEmail: ${data.reply_to}\n\n${data.message}`)}`;
+    location.href = mailto;
     say('Ouverture de votre application email…');
   } finally { btn.disabled = false; $('span', btn).textContent = 'Envoyer'; }
 });
