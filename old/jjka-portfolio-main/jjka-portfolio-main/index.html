@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Kossivi Jacques Junior AGBENONZAN, étudiant en cybersécurité, réseaux, télécommunications et stage BSS Manager chez ZTE.">
+    <meta name="theme-color" content="#10a5a5">
+
+    <!-- ── Open Graph / Social ── -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="JJKA · Cybersécurité, Réseaux & Télécoms | Abidjan">
+    <meta property="og:description" content="Portfolio de Kossivi Jacques Junior AGBENONZAN — Étudiant en cybersécurité, réseaux et télécoms, avec un stage BSS Manager chez ZTE.">
+    <meta property="og:image" content="document/1770812254707.png">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="JJKA · Cybersécurité & Réseaux">
+    <meta name="twitter:description" content="Portfolio de Kossivi Jacques Junior AGBENONZAN — Étudiant en Cybersécurité & Réseaux.">
+    <meta name="twitter:image" content="document/1770812254707.png">
+
+    <!-- Favicon emoji -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+    <title>JJKA · Cybersécurité, Réseaux & Télécoms | Abidjan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({ publicKey: "VOTRE_PUBLIC_KEY" }); // ← remplace par ta clé EmailJS
+      })();
+    </script>
+</head>
+<body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <nav class="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container">
+            <a href="#accueil" class="logo" aria-label="Accueil JJKA">JJKA<span class="logo-dot">.</span></a>
+            <ul class="nav-links" id="primary-nav" role="list">
+                <li><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li><a class="nav-link" href="#apropos">À propos</a></li>
+                <li><a class="nav-link" href="#competences">Compétences</a></li>
+                <li><a class="nav-link" href="#projets">Projets</a></li>
+                <li><a class="nav-link" href="#ctf">CTF</a></li>
+                <li><a class="nav-link" href="#parcours">Parcours</a></li>
+                <li><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Activer le mode clair" title="Changer de thème">
+                    <span class="theme-icon theme-icon-moon" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </span>
+                    <span class="theme-icon theme-icon-sun" aria-hidden="true">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </span>
+                    <span class="theme-track" aria-hidden="true"><span class="theme-thumb"></span></span>
+                </button>
+                <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="primary-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══ HERO ═══ -->
+    <section id="accueil" class="hero">
+        <div class="hero-ornaments" aria-hidden="true">
+            <span class="orb orb-1"></span>
+            <span class="orb orb-2"></span>
+            <span class="orb orb-3"></span>
+            <span class="grid-sheen"></span>
+            <div class="hero-scan-line"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-dot"></span> Bonjour, je suis
+                    </div>
+                    <h1 class="hero-title">
+                        Kossivi Jacques<br>Junior
+                        <span class="highlight hero-name-accent">AGBENONZAN</span>
+                    </h1>
+                    <h2 class="hero-role">
+                        <span class="role-bracket">[</span>
+                        <span id="typing-text"></span><span class="typing-cursor">|</span>
+                        <span class="role-bracket">]</span>
+                    </h2>
+                    <p class="hero-desc">
+                        Passionné par Python, la cybersécurité, l'automatisation réseau et les technologies de télécommunication,
+                        je conçois, sécurise et optimise des infrastructures IT avec une forte sensibilité aux enjeux de performance,
+                        fiabilité et protection. Actuellement en Master 2026–2027, je prépare aussi un stage de 4 mois en BSS
+                        Management chez ZTE, du 03 août au 27 novembre 2026.
+                    </p>
+                    <div class="hero-status" aria-label="Informations clés du profil">
+                        <span class="status-pill"><i class="fas fa-graduation-cap"></i> Master 1 · 2026–2027</span>
+                        <span class="status-pill"><i class="fas fa-satellite-dish"></i> Stage ZTE · BSS Manager</span>
+                    </div>
+                    <div class="hero-tags">
+                        <span><i class="fas fa-shield-halved"></i> Cyber défense</span>
+                        <span><i class="fab fa-python"></i> Python &amp; Automatisation</span>
+                        <span><i class="fas fa-network-wired"></i> Réseaux &amp; Cloud</span>
+                        <span><i class="fas fa-flag"></i> CTF &amp; sécurité</span>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Me Contacter</a>
+                        <a href="#projets" class="btn btn-secondary">Voir Mes Projets <i class="fas fa-arrow-right"></i></a>
+                        <a href="document/MON%20CV.pdf" class="btn btn-ghost" download><i class="fas fa-download"></i> CV (PDF)</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/kossivi-jacques-junior-agbenonzan-235bb1358" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JunRoot29" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://web.facebook.com/junior.kossivi.2025" target="_blank" rel="noreferrer" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/juniork_2902/" target="_blank" rel="noreferrer" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:Junioragbenonzan31@gmail.com" aria-label="Email" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="profile-frame">
+                        <img src="document/1770812254707.png" alt="Portrait de Kossivi Jacques Junior AGBENONZAN" class="profile-photo" loading="eager">
+                    </div>
+                    <div class="profile-badge">
+                        <i class="fas fa-shield-heart"></i>
+                        <span>Cyber &amp; Réseaux</span>
+                    </div>
+                    <div class="orbit" aria-hidden="true">
+                        <span class="orbit-ring ring-outer"></span>
+                        <span class="orbit-ring ring-mid"></span>
+                        <span class="orbit-ring ring-inner"></span>
+                        <span class="target-crosshair crosshair-h"></span>
+                        <span class="target-crosshair crosshair-v"></span>
+                        <span class="orbit-dot dot-1"></span>
+                        <span class="orbit-dot dot-2"></span>
+                        <span class="orbit-dot dot-3"></span>
+                    </div>
+                    <div class="floating-elements" aria-hidden="true">
+                        <div class="floating-element element1"><i class="fab fa-python"></i></div>
+                        <div class="floating-element element2"><i class="fas fa-shield-alt"></i></div>
+                        <div class="floating-element element3"><i class="fas fa-network-wired"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+            <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+            <span class="scroll-label">Défiler</span>
+        </div>
+    </section>
+
+    <!-- ═══ STATS ═══ -->
+    <section class="section stats" aria-label="Chiffres clés">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon-wrap"><i class="fas fa-project-diagram"></i></div>
+                    <h3 class="stat-number" data-count="14">0</h3>
+                    <p>Projets réalisés</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrap"><i class="fas fa-code"></i></div>
+                    <h3 class="stat-number" data-count="10">0</h3>
+                    <p>Technologies maîtrisées</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrap"><i class="fas fa-flag"></i></div>
+                    <h3 class="stat-number" data-count="15">0</h3>
+                    <p>Challenges CTF résolus</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrap"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="stat-number" data-count="3">0</h3>
+                    <p>Années d'études</p>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon-wrap"><i class="fas fa-award"></i></div>
+                    <h3 class="stat-number" data-count="5">0</h3>
+                    <p>Certifications obtenues</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ À PROPOS ═══ -->
+    <section id="apropos" class="section about">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Qui suis-je ?</span>
+                <h2 class="section-title">À <span class="highlight">propos</span></h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Étudiant en Licence 3 RIST &amp; stagiaire BSS Manager</h3>
+                    <p>
+                        Passionné par Python, la cybersécurité, les réseaux et les télécommunications, je développe des compétences solides en conception,
+                        sécurisation et optimisation des infrastructures informatiques. En plus de mon parcours académique, j'ai obtenu un stage de 4 mois
+                        chez ZTE en tant que BSS Manager (Base Station System), du 03 août au 27 novembre 2026. Ce stage renforce mon intérêt pour les
+                        systèmes de télécommunication, la supervision réseau et l'optimisation des performances de services radio.
+                    </p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-id-badge"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Profil</span>
+                                <span class="info-value">Kossivi Jacques Junior AGBENONZAN</span>
+                                <span class="info-note">Étudiant orienté cybersécurité, réseaux et télécoms</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-satellite-dish"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Stage</span>
+                                <span class="info-value">ZTE · BSS Manager</span>
+                                <span class="info-note">03 Août — 27 Novembre 2026 · 4 mois</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Base</span>
+                                <span class="info-value">Port-Bouet, Abidjan, Côte d'Ivoire</span>
+                                <span class="info-note">Disponible pour missions sur site ou à distance</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-user-clock"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Âge</span>
+                                <span class="info-value">22 ans</span>
+                                <span class="info-note">Progression continue en cybersécurité et cloud</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-flag"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Nationalité</span>
+                                <span class="info-value">Togolaise 🇹🇬</span>
+                                <span class="info-note">Culture technique francophone, ouverte à l'international</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Email</span>
+                                <span class="info-value">Junioragbenonzan31@gmail.com</span>
+                                <span class="info-note">Réponse rapide pour stage, freelance ou collaboration</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="info-copy">
+                                <span class="info-label">Téléphone</span>
+                                <span class="info-value">+225 05 75 88 98 26</span>
+                                <span class="info-note">Canal direct pour prise de contact professionnelle</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualities">
+                        <h4>Qualités personnelles</h4>
+                        <div class="tags">
+                            <span class="tag">Autodidacte</span>
+                            <span class="tag">Adaptation rapide</span>
+                            <span class="tag">Rigueur</span>
+                            <span class="tag">Travail en équipe</span>
+                            <span class="tag">Curiosité</span>
+                            <span class="tag">Méthodologie</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="document/CV_Kossivi_Jacques_Junior_Cybersecurite_2026.pdf" class="btn btn-primary" download>
+                            <i class="fas fa-file-arrow-down"></i> Télécharger le CV (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ COMPÉTENCES ═══ -->
+    <section id="competences" class="section skills">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Stack technique</span>
+                <h2 class="section-title">Compétences <span class="highlight">techniques</span></h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Python</span><span class="skill-pct">65%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" aria-label="Python 65%">
+                                <div class="skill-level" data-level="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">HTML / CSS</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="HTML CSS 75%">
+                                <div class="skill-level" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Langage C & C++</span><span class="skill-pct">50%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Langage C & C++ 50%">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Java</span><span class="skill-pct">50%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Langage C & C++ 50%">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3>Réseaux &amp; Sécurité</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Cisco Packet Tracer</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Wireshark</span><span class="skill-pct">75%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Protocoles réseaux</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Virtualisation (VirtualBox, VMware)</span><span class="skill-pct">80%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-cat-header">
+                        <div class="skill-cat-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud &amp; Outils</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">AWS</span><span class="skill-pct">50%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Docker</span><span class="skill-pct">50%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Analyse de menaces</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="70"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-top"><span class="skill-name">Linux (Ubuntu & Kali)</span><span class="skill-pct">70%</span></div>
+                            <div class="skill-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                                <div class="skill-level" data-level="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PROJETS ═══ -->
+    <section id="projets" class="section projects">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Ce que j'ai construit</span>
+                <h2 class="section-title">Mes <span class="highlight">Projets</span></h2>
+            </div>
+
+            <div class="project-filter" role="group" aria-label="Filtrer les projets">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> Tous</button>
+                <button class="filter-btn" data-filter="mobile"><i class="fas fa-mobile-alt"></i> Mobile</button>
+                <button class="filter-btn" data-filter="web"><i class="fas fa-laptop-code"></i> Web Dev</button>
+                <button class="filter-btn" data-filter="security"><i class="fas fa-shield-halved"></i> Cybersécurité</button>
+                <button class="filter-btn" data-filter="cloud"><i class="fas fa-cloud"></i> Cloud/Réseaux</button>
+                <button class="filter-btn" data-filter="iot"><i class="fas fa-microchip"></i> IoT</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
+                    </div>
+                    <h3>MathCraft Web</h3>
+                    <p>Plateforme web interactive de mathématiques numériques avec API Flask pour l'apprentissage accessible.</p>
+                    <div class="project-tech"><span>Python</span><span>Flask</span><span>API REST</span><span>JavaScript</span></div>
+                    <div class="project-details">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Calculs numériques via API REST</li>
+                            <li>Théorie des nombres</li>
+                            <li>Intégration numérique</li>
+                            <li>Interpolation de Lagrange</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-link is-disabled" aria-disabled="true"><i class="fas fa-clock"></i> Démo privée en préparation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card featured" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
+                    </div>
+                    <div class="featured-label">⭐ Projet phare</div>
+                    <h3>Projet Fil Rouge</h3>
+                    <p>Infrastructure virtualisée sécurisée avec segmentation réseau, cloud dockerisé et audit NIST.</p>
+                    <div class="project-tech"><span>Docker</span><span>Cybersécurité</span><span>Virtualisation</span><span>NIST</span></div>
+                    <div class="project-details">
+                        <h4>Architecture</h4>
+                        <ul>
+                            <li>Segmentation réseau (LAN/DMZ)</li>
+                            <li>Cloud simulé avec Docker</li>
+                            <li>Audit de sécurité</li>
+                            <li>Analyse forensic</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/JunRoot29/TP3---CyberSecurit---AGBENONZAN-JUNIOR-SANOGO-SOULEYMANE.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                            <a href="document/Documentation%20-%20Pro%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Docs</a>
+                            <a href="document/Rapport%20Final%20%E2%80%94%20Projet%20Fil%20rouge.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-building"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
+                    </div>
+                    <h3>HKI Innovation</h3>
+                    <p>Site web professionnel pour une entreprise spécialisée en reprographie, informatique et formations à Abidjan.</p>
+                    <div class="project-tech"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive</span></div>
+                    <div class="project-details">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Design responsive moderne</li>
+                            <li>Intégration WhatsApp</li>
+                            <li>16 programmes de formation</li>
+                            <li>SEO optimisé</li>
+                        </ul>
+                        <div class="project-links">
+                             <a href="https://www.hkiinovation.com/" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-external-link-alt"></i> Voir le site</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="cloud">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-cloud"></i></div>
+                        <div class="project-cat-badge cloud-badge">Cloud</div>
+                    </div>
+                    <h3>Application Serverless AWS</h3>
+                    <p>Application web utilisant les services serverless d'AWS : Lambda, API Gateway, S3.</p>
+                    <div class="project-tech"><span>AWS</span><span>Lambda</span><span>API Gateway</span><span>S3</span></div>
+                    <div class="project-details">
+                        <div class="project-links">
+                            <a href="https://ufhb-frontend-jjk.s3.eu-north-1.amazonaws.com/index.html" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-external-link-alt"></i> Live</a>
+                            <a href="https://github.com/JunRoot29/Site-Ufhb.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
+                    </div>
+                    <h3>MathCraft Tkinter</h3>
+                    <p>Application de calculatrice moderne avec interface graphique utilisant Python et Tkinter.</p>
+                    <div class="project-tech"><span>Python</span><span>Tkinter</span><span>GUI</span></div>
+                    <div class="project-details">
+                        <div class="project-links">
+                            <a href="https://github.com/JunRoot29/MathCraft.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-binoculars"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
+                    </div>
+                    <h3>Analyse réseau Wireshark</h3>
+                    <p>Analyse de trafic réseau et détection de menaces à l'aide de Wireshark.</p>
+                    <div class="project-tech"><span>Wireshark</span><span>Réseaux</span><span>Sécurité</span></div>
+                    <div class="project-details">
+                        <div class="project-links">
+                            <a href="document/Analyse%20WireShark.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-desktop"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
+                    </div>
+                    <h3>Supervision réseau Centreon</h3>
+                    <p>Solution complète de supervision réseau avec Centreon dans un environnement VMware.</p>
+                    <div class="project-tech"><span>Centreon</span><span>SNMP</span><span>VMware</span><span>Postfix</span></div>
+                    <div class="project-details">
+                        <div class="project-stats">
+                            <div class="stat"><span class="stat-number">3</span><span class="stat-label">Serveurs</span></div>
+                        </div>
+                        <div class="project-links">
+                            <a href="document/centreon.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-book-open"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
+                    </div>
+                    <h3>Gestion de Bibliothèque</h3>
+                    <p>Application web avec Flask, SQLite pour gérer comptes, catalogue, emprunts et réservations.</p>
+                    <div class="project-tech"><span>Python</span><span>Flask</span><span>SQLite</span><span>HTML/CSS</span></div>
+                    <div class="project-details">
+                        <h4>Points forts</h4>
+                        <ul>
+                            <li>Gestion des rôles admin/usager</li>
+                            <li>Workflow complet d'emprunt</li>
+                            <li>Dashboards avec alertes</li>
+                            <li>Recherche multicritères</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/JunRoot29/Gestion-d-une-Bibliotheque.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                            <a href="document/RAPPORT%20DU%20PROJETGESTION%20DE%20BIBLIOTHEQUE.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="web">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="project-cat-badge">Web Dev</div>
+                    </div>
+                    <h3>Simulation Inscription UFHB</h3>
+                    <p>Application de gestion des inscriptions universitaires avec Flask, Kivy et SQLite.</p>
+                    <div class="project-tech"><span>Flask</span><span>Kivy</span><span>SQLite</span><span>Python</span></div>
+                    <div class="project-details">
+                        <h4>Workflow métier</h4>
+                        <ul>
+                            <li>Création et suivi du dossier</li>
+                            <li>Validation pédagogique</li>
+                            <li>Tableau de bord et filtres</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/JunRoot29/TP---FIN-DE-MODULE---GENIE-LOGICIEL.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="security">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+                        <div class="project-cat-badge security-badge">Sécurité</div>
+                    </div>
+                    <h3>Analyse DHCP DORA IPv4 vs IPv6</h3>
+                    <p>Analyse comparative du processus DORA DHCP entre IPv4 et IPv6 via captures Wireshark.</p>
+                    <div class="project-tech"><span>DHCP</span><span>Wireshark</span><span>IPv4/IPv6</span><span>Kathara</span></div>
+                    <div class="project-details">
+                        <h4>Livrables</h4>
+                        <ul>
+                            <li>Captures PCAP DHCPv4 et DHCPv6</li>
+                            <li>Comparatif broadcast et multicast</li>
+                            <li>Analyse concise du processus DORA</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/JunRoot29/Projet-DHCP-Analyse-du-processus-DORA-IPv4-vs-IPv6-.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                            <a href="document/TP%20%E2%80%93%20DHCP.pdf" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-file-pdf"></i> Rapport</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card featured" data-category="mobile">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-map-location-dot"></i></div>
+                        <div class="project-cat-badge mobile-badge">Mobile</div>
+                    </div>
+                    <div class="featured-label">🌟 App publiée</div>
+                    <h3>CampusNav — UFHB</h3>
+                    <p>Application mobile de géolocalisation et navigation sur le campus de l'Université Félix Houphouët-Boigny d'Abidjan. Téléchargeable et disponible en ligne.</p>
+                    <div class="project-tech"><span>Mobile</span><span>GéoMapping</span><span>Navigation</span><span>UFHB</span></div>
+                    <div class="project-details">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Carte interactive du campus UFHB</li>
+                            <li>Navigation point à point en temps réel</li>
+                            <li>Localisation des bâtiments et salles</li>
+                            <li>Interface optimisée pour mobile</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://junior.devsione.ci/" target="_blank" class="project-link" rel="noreferrer"><i class="fas fa-external-link-alt"></i> Voir l'app</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card featured" data-category="iot">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="project-cat-badge iot-badge">IoT</div>
+                    </div>
+                    <div class="featured-label">⭐ Projet phare</div>
+                    <h3>IoT Smart Parking & Edge Security</h3>
+                    <p>Plateforme IoT distribuée de gestion intelligente d'un parking connecté : détection ESP32, Edge IDS embarqué, pipeline MQTT → Node-RED → InfluxDB → Grafana.</p>
+                    <div class="project-tech"><span>ESP32</span><span>MQTT</span><span>Node-RED</span><span>InfluxDB</span><span>Grafana</span><span>Docker</span></div>
+                    <div class="project-details">
+                        <h4>Architecture</h4>
+                        <ul>
+                            <li>HC-SR04 + DHT22 + LCD 16x2 + servo moteur</li>
+                            <li>Edge IDS embarqué : détection intrusions en temps réel</li>
+                            <li>Pipeline MQTT → Node-RED (ETL) → InfluxDB (time-series)</li>
+                            <li>Dashboard Grafana : parking + environnement + sécurité</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/TankRoot29/Projet-IoT---parking-iot-service.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="cloud">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-server"></i></div>
+                        <div class="project-cat-badge cloud-badge">Réseaux</div>
+                    </div>
+                    <h3>Load Balancing DNS &amp; Web</h3>
+                    <p>Infrastructure haute disponibilité avec cluster DNS (BIND9) et ferme web (Apache2) répartis via iptables DNAT/NAT, émulés sous Kathara/Docker.</p>
+                    <div class="project-tech"><span>Kathara</span><span>iptables</span><span>BIND9</span><span>Apache2</span><span>Docker</span></div>
+                    <div class="project-details">
+                        <h4>Architecture</h4>
+                        <ul>
+                            <li>2 serveurs DNS racine + load balancer UDP/53</li>
+                            <li>2 serveurs web + load balancer TCP/80</li>
+                            <li>Répartition ~50/50 validée sur 100 requêtes</li>
+                            <li>Émulation réseau complète sous Kathara</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/TankRoot29/Projet-LoadBalancing.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> Dépôt</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="cloud">
+                    <div class="project-card-top">
+                        <div class="project-icon"><i class="fas fa-music"></i></div>
+                        <div class="project-cat-badge cloud-badge">Réseaux</div>
+                    </div>
+                    <h3>AudioStream UDP</h3>
+                    <p>Diffusion de flux audio WAV en temps réel via UDP en Java, avec jitter buffer intelligent, réordonnancement des paquets et statistiques en direct (latence, pertes).</p>
+                    <div class="project-tech"><span>Java</span><span>UDP</span><span>Java Sound API</span><span>Jitter Buffer</span></div>
+                    <div class="project-details">
+                        <h4>Fonctionnalités</h4>
+                        <ul>
+                            <li>Streaming audio temps réel serveur → client</li>
+                            <li>Format audio dynamique dans le premier paquet</li>
+                            <li>Jitter buffer avec <code>ConcurrentSkipListMap</code></li>
+                            <li>Stats live : latence, paquets perdus, taille buffer</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/TankRoot29/Diffusion-de-flux-Audio-avec-UDP.git" target="_blank" class="project-link" rel="noreferrer"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="project-categories">
+                    <div class="cat-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Développement web</h3>
+                    <p>Projets frontend et backend avec technologies modernes</p>
+                </div>
+                <div class="category">
+                    <div class="cat-icon-wrap"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Cybersécurité</h3>
+                    <p>Infrastructures sécurisées et analyses de sécurité</p>
+                </div>
+                <div class="category">
+                    <div class="cat-icon-wrap"><i class="fas fa-network-wired"></i></div>
+                    <h3>Réseaux &amp; Cloud</h3>
+                    <p>Architectures réseaux et déploiements cloud</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CTF & HACKING ═══ -->
+    <section id="ctf" class="section ctf-section">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Compétences offensives</span>
+                <h2 class="section-title">CTF &amp; <span class="highlight">Hacking</span></h2>
+            </div>
+
+            <div class="ctf-intro">
+                <p>Je participe régulièrement à des challenges CTF (Capture The Flag) pour affûter mes compétences en sécurité offensive et défensive. Mes write-ups sont publiés sur GitHub pour partager les solutions et la méthodologie.</p>
+                <div class="ctf-platforms">
+                    <div class="ctf-platform-card">
+                        <div class="ctf-platform-icon"><i class="fas fa-flag"></i></div>
+                        <div class="ctf-platform-info">
+                            <span class="ctf-platform-name">CyLab Academy</span>
+                            <span class="ctf-platform-sub">Challenges CTF actifs</span>
+                        </div>
+                    </div>
+                    <div class="ctf-platform-card">
+                        <div class="ctf-platform-icon thm-icon"><i class="fas fa-skull-crossbones"></i></div>
+                        <div class="ctf-platform-info">
+                            <span class="ctf-platform-name">TryHackMe</span>
+                            <span class="ctf-platform-sub">Rooms &amp; Parcours actifs</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/TankRoot29/pico-ctf-writeups" target="_blank" rel="noreferrer" class="ctf-platform-card">
+                        <div class="ctf-platform-icon"><i class="fab fa-github"></i></div>
+                        <div class="ctf-platform-info">
+                            <span class="ctf-platform-name">CyLab Academy Write-ups</span>
+                            <span class="ctf-platform-sub">github.com/TankRoot29</span>
+                        </div>
+                        <i class="fas fa-external-link-alt ctf-platform-arrow"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="ctf-categories-grid">
+                <div class="ctf-cat-card">
+                    <div class="ctf-cat-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Web Exploitation</h3>
+                    <p>Injection SQL, XSS, IDOR, bypass d'authentification, analyse de cookies et sessions.</p>
+                    <div class="ctf-cat-tags"><span>SQLi</span><span>XSS</span><span>IDOR</span></div>
+                </div>
+                <div class="ctf-cat-card">
+                    <div class="ctf-cat-icon"><i class="fas fa-lock-open"></i></div>
+                    <h3>Cryptographie</h3>
+                    <p>Chiffrement symétrique/asymétrique, RSA, XOR, Caesar, analyse de fréquences.</p>
+                    <div class="ctf-cat-tags"><span>RSA</span><span>XOR</span><span>Base64</span></div>
+                </div>
+                <div class="ctf-cat-card">
+                    <div class="ctf-cat-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>General Skills</h3>
+                    <p>Linux, Bash, Python scripting, manipulation de fichiers, pipes et redirections.</p>
+                    <div class="ctf-cat-tags"><span>Linux</span><span>Bash</span><span>Python</span></div>
+                </div>
+                <div class="ctf-cat-card">
+                    <div class="ctf-cat-icon"><i class="fas fa-search"></i></div>
+                    <h3>Forensics &amp; OSINT</h3>
+                    <p>Analyse de métadonnées, fichiers cachés, stéganographie, investigation réseau.</p>
+                    <div class="ctf-cat-tags"><span>Stégano</span><span>PCAP</span><span>Metadata</span></div>
+                </div>
+            </div>
+
+            <!-- Parcours Cisco Cyberanalyste -->
+            <div class="cisco-track">
+                <div class="cisco-track-header">
+                    <div class="cisco-track-icon"><i class="fas fa-route"></i></div>
+                    <div>
+                        <h3>Parcours Cisco · Cyberanalyste Junior</h3>
+                        <p>Certification professionnelle en cours — Cisco Networking Academy</p>
+                    </div>
+                    <span class="cisco-track-badge">En cours</span>
+                </div>
+                <div class="cisco-track-modules">
+                    <div class="cisco-module cisco-module--done">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Introduction à la Cybersécurité</span>
+                            <span class="cisco-module-status done">✓ Complété</span>
+                        </div>
+                    </div>
+                    <div class="cisco-module cisco-module--done">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Networking Basics</span>
+                            <span class="cisco-module-status done">✓ Complété</span>
+                        </div>
+                    </div>
+                    <div class="cisco-module cisco-module--done">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Networking Devices &amp; Initial Configuration</span>
+                            <span class="cisco-module-status done">✓ Complété</span>
+                        </div>
+                    </div>
+                    <div class="cisco-module cisco-module--active">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Endpoint Security</span>
+                            <span class="cisco-module-status active">⟳ En cours</span>
+                        </div>
+                    </div>
+                    <div class="cisco-module cisco-module--pending">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Network Defense</span>
+                            <span class="cisco-module-status pending">À venir</span>
+                        </div>
+                    </div>
+                    <div class="cisco-module cisco-module--pending">
+                        <div class="cisco-module-dot"></div>
+                        <div class="cisco-module-content">
+                            <span class="cisco-module-name">Cyber Threat Management</span>
+                            <span class="cisco-module-status pending">À venir</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PARCOURS ═══ -->
+    <section id="parcours" class="section timeline">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Mon chemin</span>
+                <h2 class="section-title">Parcours <span class="highlight">académique</span></h2>
+            </div>
+            <div class="timeline-container">
+
+                <!-- Stage ZTE — le plus récent, contenu à DROITE -->
+                <div class="timeline-item tl-right">
+                    <div class="timeline-date">
+                        <span class="tl-year">Août – Nov. 2026</span>
+                        <span class="tl-status tl-status--exp">Stage</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content timeline-content--exp">
+                        <h3>Stage – BSS Manager (Base Station System)</h3>
+                        <p>Supervision, optimisation et support des systèmes BSS pour la gestion et le bon fonctionnement des services de réseau radio.</p>
+                        <p class="institution"><i class="fas fa-building"></i> ZTE Corporation</p>
+                    </div>
+                </div>
+
+                <!-- M1 — contenu à GAUCHE -->
+                <div class="timeline-item tl-left">
+                    <div class="timeline-content">
+                        <h3>Master 1 en Sciences Informatiques</h3>
+                        <p>Spécialité RIST — Réseaux, Informatique, Sécurité et Télécommunication</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="tl-year">2025 – 2026</span>
+                        <span class="tl-status">M1</span>
+                    </div>
+                </div>
+
+                <!-- L3 — contenu à DROITE -->
+                <div class="timeline-item tl-right">
+                    <div class="timeline-date">
+                        <span class="tl-year">2024 – 2025</span>
+                        <span class="tl-status">L3</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Licence 3 en Sciences Informatiques</h3>
+                        <p>Spécialité RIST — Réseaux, Informatique, Sécurité et Télécommunication</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
+                    </div>
+                </div>
+
+                <!-- L2 — contenu à GAUCHE -->
+                <div class="timeline-item tl-left">
+                    <div class="timeline-content">
+                        <h3>Licence 2 (DEUG II) en Sciences Informatiques</h3>
+                        <p>UFR de Mathématique et Informatique</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="tl-year">2023 – 2024</span>
+                        <span class="tl-status">L2</span>
+                    </div>
+                </div>
+
+                <!-- L1 — contenu à DROITE -->
+                <div class="timeline-item tl-right">
+                    <div class="timeline-date">
+                        <span class="tl-year">2022 – 2023</span>
+                        <span class="tl-status">L1</span>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Licence 1 (DEUG I) Mathématique et Application</h3>
+                        <p>UFR de Mathématique et Informatique</p>
+                        <p class="institution"><i class="fas fa-university"></i> Université Félix Houphouët-Boigny, Abidjan</p>
+                    </div>
+                </div>
+
+                <!-- BAC — le plus ancien, contenu à GAUCHE -->
+                <div class="timeline-item tl-left">
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Série D — Scientifique</h3>
+                        <p class="institution"><i class="fas fa-school"></i> Lycée Moderne de Port Bouet, Abidjan</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">
+                        <span class="tl-year">2021 – 2022</span>
+                        <span class="tl-status">BAC</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CERTIFICATIONS ═══ -->
+    <section id="certifications" class="section certifications">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Reconnaissance officielle</span>
+                <h2 class="section-title">Certifications <span class="highlight">&amp; Badges</span></h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <div class="cert-logo">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="cert-badge-label">Fortinet</div>
+                    </div>
+                    <h3>Fortinet Certified Fundamentals (FCF) SP</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Fortinet Institute</p>
+                    <p class="cert-date"><i class="fas fa-calendar-check"></i> Émise le <strong>05 Mai 2026</strong></p>
+                    <a href="https://www.credly.com/badges/c38d412e-5904-41db-b90b-c3bc70bea70b/public_url" target="_blank" rel="noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Credly
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <div class="cert-logo">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="cert-badge-label">Cisco</div>
+                    </div>
+                    <h3>Networking Devices and Initial Configuration</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                    <p class="cert-date"><i class="fas fa-calendar-check"></i> Émise le <strong>févr. 2026</strong></p>
+                    <a href="https://www.credly.com/badges/8c8edaf0-68df-4063-8944-5a7971641e2b/public_url" target="_blank" rel="noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Credly
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <div class="cert-logo">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <div class="cert-badge-label">Cisco</div>
+                    </div>
+                    <h3>Networking Basics</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                    <p class="cert-date"><i class="fas fa-calendar-check"></i> Émise le <strong>août 2025</strong></p>
+                    <a href="https://www.credly.com/badges/b562b818-ab4f-4ed0-b8e1-c3a5b98187b6/public_url" target="_blank" rel="noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Credly
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <div class="cert-logo">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div class="cert-badge-label">Cisco</div>
+                    </div>
+                    <h3>Introduction to Cybersecurity</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                    <p class="cert-date"><i class="fas fa-calendar-check"></i> Émise le <strong>avr. 2024</strong></p>
+                    <a href="https://www.credly.com/badges/7351de4b-d897-499a-ac6f-2ee02b128fec/public_url" target="_blank" rel="noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Credly
+                    </a>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-card-top">
+                        <div class="cert-logo">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="cert-badge-label">Cisco</div>
+                    </div>
+                    <h3>Premiers pas avec Cisco Packet Tracer</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                    <p class="cert-date"><i class="fas fa-calendar-check"></i> Émise le <strong>03 Août 2026</strong></p>
+                    <a href="#" target="_blank" rel="noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> Voir sur Credly
+                    </a>
+                </div>
+
+                <div class="cert-card cert-card--pending">
+                    <div class="cert-card-top">
+                        <div class="cert-logo cert-logo--pending">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <div class="cert-badge-label cert-badge-label--pending">En cours</div>
+                    </div>
+                    <h3>Python Certification</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> En cours de préparation</p>
+                    <p class="cert-date cert-date--pending"><i class="fas fa-hourglass-half"></i> Certification en cours d'obtention</p>
+                    <span class="cert-link cert-link--pending">
+                        <i class="fas fa-spinner fa-spin"></i> Bientôt disponible
+                    </span>
+                </div>
+
+                <div class="cert-card cert-card--pending">
+                    <div class="cert-card-top">
+                        <div class="cert-logo cert-logo--pending">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <div class="cert-badge-label cert-badge-label--pending">En cours</div>
+                    </div>
+                    <h3>Junior Cybersecurity Analyst</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+                    <p class="cert-date cert-date--pending"><i class="fas fa-hourglass-half"></i> Parcours cyberanalyste en cours</p>
+                    <span class="cert-link cert-link--pending">
+                        <i class="fas fa-spinner fa-spin"></i> Bientôt disponible
+                    </span>
+                </div>
+
+                <div class="cert-card cert-card--pending">
+                    <div class="cert-card-top">
+                        <div class="cert-logo cert-logo--pending">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <div class="cert-badge-label cert-badge-label--pending">En cours</div>
+                    </div>
+                    <h3>Sécurité des Terminaux</h3>
+                    <p class="cert-issuer"><i class="fas fa-building"></i> En cours de préparation</p>
+                    <p class="cert-date cert-date--pending"><i class="fas fa-hourglass-half"></i> Certification en cours d'obtention</p>
+                    <span class="cert-link cert-link--pending">
+                        <i class="fas fa-spinner fa-spin"></i> Bientôt disponible
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ CONTACT ═══ -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <div class="section-head">
+                <span class="section-eyebrow">Travaillons ensemble</span>
+                <h2 class="section-title">Me <span class="highlight">Contacter</span></h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">Disponible pour des opportunités de stage, collaborations ou projets freelance. N'hésitez pas à me contacter !</p>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Port-Bouet, Abidjan, Côte d'Ivoire</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:Junioragbenonzan31@gmail.com">Junioragbenonzan31@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon-wrap"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+2250575889826">+225 05 75 88 98 26</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/kossivi-jacques-junior-agbenonzan-235bb1358" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/JunRoot29" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://web.facebook.com/junior.kossivi.2025" target="_blank" rel="noreferrer" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 class="form-title">Envoyer un message</h3>
+                    <!-- EmailJS form — remplace YOUR_SERVICE_ID et YOUR_TEMPLATE_ID dans script.js -->
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="contact-name">Votre nom *</label>
+                            <input type="text" id="contact-name" name="from_name" placeholder="Jean Dupont" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Votre email *</label>
+                            <input type="email" id="contact-email" name="reply_to" placeholder="jean@exemple.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Votre message *</label>
+                            <textarea id="contact-message" name="message" placeholder="Décrivez votre projet ou votre demande..." rows="5" required></textarea>
+                        </div>
+                        <p class="contact-help"><i class="fas fa-paper-plane"></i> Le message sera envoyé directement à mon adresse email.</p>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i> <span id="submitBtnText">Envoyer le Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">JJKA<span class="logo-dot">.</span></span>
+                    <p>Étudiant en Cybersécurité &amp; Réseaux · Abidjan, Côte d'Ivoire 🇨🇮</p>
+                </div>
+                <nav class="footer-links" aria-label="Liens du pied de page">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#ctf">CTF</a>
+                    <a href="#parcours">Parcours</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kossivi Jacques Junior AGBENONZAN. Tous droits réservés.</p>
+                <p class="footer-credit">Conçu &amp; développé avec ❤️ par JJKA</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Retour en haut"><i class="fas fa-arrow-up"></i></button>
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
